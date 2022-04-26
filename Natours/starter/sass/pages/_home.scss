@@ -19,6 +19,31 @@
 
 .section__tours {
     background-color: $color-gray-light-1;
-    padding: 25rem $gutter-horizontal;
+    padding: 25rem $gutter-horizontal 15rem;
     margin-top: -10rem;
+}
+
+.section__stories {
+    padding: 15rem $gutter-horizontal;
+    position: relative;
+}
+
+.section__booking {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+}
+
+.booking {
+    background-image: linear-gradient(105deg, rgba($color-white, .85) 0%, rgba($color-white, .85) 50%, transparent 50%), url(../img/nat-10.jpg);
+    background-size: 100%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .2); 
+    border-radius: .5rem;
+
+    height: 50rem;
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+        box-sizing: border-box;
+    }
 }

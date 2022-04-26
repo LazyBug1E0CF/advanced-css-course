@@ -128,14 +128,15 @@
 
     &__price-value {
         font-size: 6rem;
-        font-weight: 100;
+        font-weight: 300;
         color: $color-white;
 
         &::before {
             content: "Only";
             display: block;
-            font-size: 1.4rem;
+            font-size: 2rem;
             font-weight: 700;
+            margin-bottom: 2rem;
         }
     }
 }
