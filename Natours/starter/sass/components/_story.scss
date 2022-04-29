@@ -8,8 +8,18 @@
     font-size: $default-font-size;
     transform: skewX(-10deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        transform: skew(0);
+        padding: 4rem;
+    }
+
     > * {
         transform: skewX(10deg);
+
+        @include respond(tab-port) {
+            transform: skew(0);
+        }
     }
 
     &__shape {

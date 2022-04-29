@@ -20,6 +20,11 @@
             // background-color: $color-primary;
             color: $color-white;
         }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__icon {
@@ -106,6 +111,11 @@
         // transform: scale(70);
 
         transition: all .5s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__checkbox:checked ~ &__background {
@@ -155,6 +165,10 @@
             background-size: 220%;
             padding: 1rem 2rem;
             transition: all .3s;
+
+            @include respond(phone) {
+                font-size: 2rem;
+            }
         }
 
         &:hover,
