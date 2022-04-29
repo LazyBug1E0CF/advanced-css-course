@@ -399,6 +399,85 @@ body {
 .form__radio-input:checked ~ .form__radio-label > .form__radio-btn::after {
   opacity: 1; }
 
+.popup {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__close {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: -1.5rem;
+    right: -1.5rem;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3); }
+    .popup__close::before, .popup__close::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: "";
+      display: block;
+      width: 50%;
+      height: .1rem;
+      background-color: #333;
+      transition: all .3s; }
+    .popup__close::before {
+      transform: translate(-50%, -50%) rotate(45deg); }
+    .popup__close::after {
+      transform: translate(-50%, -50%) rotate(-45deg); }
+    .popup__close:hover::before {
+      transform: translate(-50%, -50%) rotate(225deg) scale(1.2); }
+    .popup__close:hover::after {
+      transform: translate(-50%, -50%) rotate(135deg) scale(1.2); }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 70%;
+    height: 60%;
+    border-radius: .5rem;
+    display: table;
+    opacity: .2;
+    transform: translate(-50%, -50%) scale(0.2);
+    transition: all .3s .2s; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__left {
+    width: 33.333333%;
+    display: table-cell;
+    overflow: hidden;
+    border-radius: .5rem 0 0 .5rem; }
+  .popup__right {
+    width: 66.666666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 0.1rem solid #f7f7f7; }
+
 .story {
   width: 75%;
   margin: 0 auto;
