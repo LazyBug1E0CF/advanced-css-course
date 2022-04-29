@@ -26,6 +26,13 @@
         border-radius: 50%;
         box-shadow: 0 0 1.5rem rgba($color: $color-black, $alpha: .3);
 
+        @include respond(tab-port) {
+            width: 6rem;
+            height: 6rem;
+            top: -3rem;
+            right: -3rem;
+        }
+
         &::before,
         &::after {
             @include abs-center;

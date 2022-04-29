@@ -458,6 +458,12 @@ body {
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3); }
+    @media (max-width: 56.25em) {
+      .popup__close {
+        width: 6rem;
+        height: 6rem;
+        top: -3rem;
+        right: -3rem; } }
     .popup__close::before, .popup__close::after {
       position: absolute;
       top: 50%;
